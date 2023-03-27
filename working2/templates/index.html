@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Facial Expression Recognition</title>
+    </head>
+    <body>
+        <h1>Facial Expression Recognition</h1>
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <label for="video">Upload a video:</label>
+            <input type="file" name="video" accept="video/*" required>
+            <button type="submit">Predict</button>
+        </form>
+        <div id="result"></div>
+        <script>
+            // Define a function to handle the form submission
+            function predict() {
+                // Get the form data
+                var formData = new FormData(document.querySelector('form'));
+                // Send a POST request to the Flask app with the form data
+                fetch('/', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Update the result div with the predicted emotion
+                    document.getElementById('result').innerHTML = '<p>Predicted emotion: ' + data.emotion + '</p>';
+                })
+                .catch(error => console.error(error));
+            }
+            // Add an event listener to the form submit button
+           

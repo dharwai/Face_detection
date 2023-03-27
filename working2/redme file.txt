@@ -1,0 +1,13 @@
+Both files on github,
+videos flaskappp and working2 
+are the same working scenrio.. one for laptop and other for pc i tried.
+thats why two folders
+
+first you need to creat a folder ,
+as i created the folder name working2 and its location is on desktop.
+inside the working2 folder i created a file untitled.ipynp (jupyter note book file)
+and also i created two folders in side the working2 folder, names templates and temporyry and in side the templates i created index.html and result.html.
+
+
+so now summary:
+in working2 folder you have 1 file of python, one model.h5,and two morw folers. templates and temporary.
